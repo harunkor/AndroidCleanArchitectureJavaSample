@@ -25,7 +25,11 @@ public class MainActivity extends AppCompatActivity {
         weatherViewModel.getWeather("istanbul").observe(this, new Observer<WeatherModel>() {
             @Override
             public void onChanged(WeatherModel weatherModel) {
-                Log.v("DGPAYS",weatherModel.toString());
+                Log.v("DGPAYS",weatherModel.getData().get(0).getWeather().getDescription());
+                Log.v("DGPAYS",weatherModel.getData().get(0).getWeather().getIcon());
+                Log.v("DGPAYS",weatherModel.getData().get(0).getWeather().getCode().toString());
+                Log.v("DGPAYS",weatherModel.getData().get(0).getAppTemp().toString());
+                Log.v("DGPAYS",weatherModel.getData().get(0).getDatetime());
 
             }
         });

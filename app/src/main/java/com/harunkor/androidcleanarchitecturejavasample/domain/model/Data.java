@@ -5,7 +5,8 @@ package com.harunkor.androidcleanarchitecturejavasample.domain.model;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
-public class Datum {
+
+public class Data {
 
     @SerializedName("rh")
     @Expose
